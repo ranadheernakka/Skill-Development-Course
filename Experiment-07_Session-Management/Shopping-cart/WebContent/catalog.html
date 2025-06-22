@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Catalog</title>
+</head>
+<body style="text-align: center;">
+    <h1>Product Catalog</h1>
+    <canvas id="catalogCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
+    <script>
+        const canvas = document.getElementById('catalogCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#f4f4f4';
+        ctx.fillRect(0, 0, 300, 150);
+        ctx.fillStyle = 'green';
+        ctx.font = '20px Arial';
+        ctx.fillText('Product Listing', 70, 75);
+    </script>
+    <br><br>
+    <a href="products">Load Products</a> <!-- This hits ProductServlet -->
+</body>
+</html>

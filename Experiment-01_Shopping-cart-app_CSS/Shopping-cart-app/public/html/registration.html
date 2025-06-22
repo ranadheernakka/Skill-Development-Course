@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies character encoding as UTF-8 for better compatibility with different languages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the page is responsive on all devices -->
+    <title>Welcome to ACE e-Book's Website</title>
+    <!-- Title of the webpage -->
+
+    <script>
+      function validateForm() {
+        // Fetching input values from the form using document.forms
+        let username = document.forms["f1"]["username"].value; // Getting username input value
+        let password = document.forms["f1"]["password"].value; // Getting password input value
+        let email = document.forms["f1"]["email"].value; // Getting email input value
+        let phone = document.forms["f1"]["phno"].value; // Getting phone number input value
+        let gender = document.querySelector('input[name="gender"]:checked'); // Fetching the selected radio button for gender
+        let languages = document.querySelectorAll(
+          'input[name="languages[]"]:checked'
+        ); // Fetching all checked checkboxes for languages
+        let address = document.forms["f1"]["address"].value; // Getting address input value
+
+        // Regular expressions for validation
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email should be in the format: example@domain.com
+        let phonePattern = /^\d{10}$/; // Phone number should be exactly 10 digits
+        let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; // Password should have at least 6 characters, 1 letter, and 1 digit
+
+        // Validation checks for each field
+        if (username.trim().length < 3) {
+          alert("Name must be at least 3 characters long.");
+          return false; // Stops form submission
+        }
+        if (!passwordPattern.test(password)) {
+          alert(
+            "Passwords must be at least 6 characters long and contain at least one letter and one number."
+          );
+          return false;
+        }
+        if (!emailPattern.test(email)) {
+          alert("Enter a valid email ID.");
+          return false;
+        }
+        if (!phonePattern.test(phone)) {
+          alert("Phone number must be exactly 10 digits.");
+          return false;
+        }
+        if (!gender) {
+          // If no gender is selected
+          alert("Please select a gender.");
+          return false;
+        }
+        if (languages.length === 0) {
+          // If no language is selected
+          alert("Please select at least one language.");
+          return false;
+        }
+        if (address.trim().length < 10) {
+          alert("Address must be at least 10 characters long.");
+          return false;
+        }
+
+        return true; // If all validations pass, allow form submission
+      }
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <h3>Registration Form</h3>
+      <!-- Heading of the form -->
+
+      <form name="f1" onsubmit="return validateForm()">
+        <!-- Form with validation on submission -->
+        <table cellpadding="5" align="center">
+          <!-- Table layout for better alignment -->
+
+          <!-- Name Field -->
+          <tr>
+            <td>Name:*</td>
+            <td><input type="text" name="username" required /></td>
+            <!-- Required field -->
+          </tr>
+
+          <!-- Password Field -->
+          <tr>
+            <td>Password:*</td>
+            <td><input type="password" name="password" required /></td>
+            <!-- Required field -->
+          </tr>
+
+          <!-- Email Field -->
+          <tr>
+            <td>Email ID:*</td>
+            <td><input type="text" name="email" required /></td>
+            <!-- Required field -->
+          </tr>
+
+          <!-- Phone Number Field -->
+          <tr>
+            <td>Phone Number:*</td>
+            <td><input type="text" name="phno" required /></td>
+            <!-- Required field -->
+          </tr>
+
+          <!-- Gender Selection -->
+          <tr>
+            <td>Gender:*</td>
+            <td>
+              <input type="radio" name="gender" value="Male" /> Male
+              <!-- Radio button for Male -->
+              <input type="radio" name="gender" value="Female" /> Female
+              <!-- Radio button for Female -->
+            </td>
+          </tr>
+
+          <!-- Language Selection -->
+          <tr>
+            <td>Language Known:*</td>
+            <td>
+              <input type="checkbox" name="languages[]" value="English" />
+              English
+              <input type="checkbox" name="languages[]" value="Telugu" /> Telugu
+              <input type="checkbox" name="languages[]" value="Hindi" /> Hindi
+              <input type="checkbox" name="languages[]" value="Tamil" /> Tamil
+            </td>
+          </tr>
+
+          <!-- Address Field -->
+          <tr>
+            <td>Address:*</td>
+            <td><textarea name="address" required></textarea></td>
+            <!-- Required textarea field -->
+          </tr>
+
+          <!-- Submit & Reset Buttons -->
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Submit" />
+              <!-- Submit button -->
+              <input type="reset" value="Reset" />
+              <!-- Reset button -->
+            </td>
+          </tr>
+
+          <!-- Mandatory Fields Notice -->
+          <tr>
+            <td colspan="2">
+              * <span style="color: red">Fields are mandatory</span>
+              <!-- Highlighting required fields -->
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>
+

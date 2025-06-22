@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Welcome to ACE e-Book's Website</title>
+    <!-- Sets the title of the webpage -->
+
+    <script>
+      function validateLoginForm() {
+        var username = document.forms["f1"]["username"].value; // Gets the username input value
+        var password = document.forms["f1"]["password"].value; // Gets the password input value
+
+        if (username.trim() === "") {
+          // Checks if the username is empty
+          alert("Username cannot be empty"); // Shows an alert if empty
+          return false; // Prevents form submission
+        }
+
+        if (password.length < 6) {
+          // Checks if the password length is less than 6 characters
+          alert("Password must be at least 6 characters long"); // Shows an alert if too short
+          return false; // Prevents form submission
+        }
+
+        return true; // Submits the form if validations pass
+      }
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <!-- Centers all the content inside -->
+      <br />
+      <h3>Login Details</h3>
+      <!-- Heading for the login section -->
+      <br />
+
+      <form name="f1" onsubmit="return validateLoginForm()">
+        <!-- Form with validation function -->
+        <table align="center">
+          <!-- Creates a table layout for the form -->
+
+          <tr>
+            <td>Username :</td>
+            <td><input type="text" name="username" /></td>
+            <!-- Input field for username -->
+          </tr>
+
+          <tr>
+            <td><br /></td>
+            <!-- Empty row for spacing -->
+          </tr>
+
+          <tr>
+            <td>Password :</td>
+            <td><input type="password" name="password" /></td>
+            <!-- Input field for password -->
+          </tr>
+
+          <tr>
+            <td><br /></td>
+            <!-- Empty row for spacing -->
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="SUBMIT" />
+              <!-- Button to submit the form -->
+              <input type="reset" value="RESET" />
+              <!-- Button to reset form fields -->
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>

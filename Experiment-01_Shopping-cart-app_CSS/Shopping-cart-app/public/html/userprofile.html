@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - Shopping Cart</title>
+    <style>
+      /* Basic styling for layout and form */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      .container {
+        width: 50%; /* Container width is 50% of the viewport */
+        margin: auto; /* Centers the container horizontally */
+        background: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px #ccc; /* Adds a shadow effect */
+        border-radius: 10px; /* Rounds the corners */
+      }
+
+      h1 {
+        color: #333; /* Dark color for heading */
+      }
+
+      table {
+        width: 100%; /* Table occupies full width */
+      }
+
+      td {
+        padding: 10px; /* Adds spacing inside table cells */
+      }
+
+      input,
+      textarea {
+        width: 100%; /* Makes inputs and textareas full width */
+        padding: 8px; /* Adds padding for better readability */
+        margin-top: 5px;
+      }
+
+      button {
+        background-color: #28a745; /* Green background color */
+        color: white; /* White text color */
+        padding: 10px;
+        border: none;
+        cursor: pointer; /* Changes cursor to pointer when hovered */
+        border-radius: 5px; /* Rounds button corners */
+      }
+
+      button:hover {
+        background-color: #218838; /* Darker green when hovered */
+      }
+
+      .profile-img {
+        width: 120px; /* Profile picture size */
+        border-radius: 50%; /* Circular profile image */
+      }
+
+      .nav {
+        margin-bottom: 20px; /* Space between navigation and form */
+      }
+
+      .nav a {
+        margin: 10px;
+        text-decoration: none;
+        color: #007bff; /* Blue color for links */
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>User Profile</h1>
+
+      <!-- Navigation Bar -->
+      <div class="nav">
+        <a href="CART.html">Shopping Cart</a> |
+        <a href="OrderConfirm.html">Order History</a> |
+        <a href="RIGHT.html">Home</a>
+      </div>
+
+      <!-- User Profile Form -->
+      <form id="profileForm">
+        <table>
+          <tr>
+            <td><strong>First Name:</strong></td>
+            <td><input type="text" id="firstName" value="Swayam Prakash" /></td>
+          </tr>
+          <tr>
+            <td><strong>Last Name:</strong></td>
+            <td><input type="text" id="lastName" value="M" /></td>
+          </tr>
+          <tr>
+            <td><strong>Email ID:</strong></td>
+            <td><input type="email" id="email" value="mail4mswayam@gmail.com" /></td>
+          </tr>
+          <tr>
+            <td><strong>Phone Number:</strong></td>
+            <td><input type="tel" id="phone" value="9390500000" /></td>
+          </tr>
+          <tr>
+            <td><strong>Address:</strong></td>
+            <td>
+              <textarea id="address" rows="3">
+Main Street, Good Area, Popular City, Best Country</textarea
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Profile Picture:</strong></td>
+            <td>
+              <!-- Profile image display with default fallback -->
+              <img
+                src="images/msplogo.jpg"
+                class="profile-img"
+                id="profilePic"
+                onerror="this.src='default.png'"
+              />
+              <br />
+              <!-- File input for uploading a new profile image -->
+              <input type="file" id="profileImage" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="button" onclick="updateProfile()">
+                Update Profile
+              </button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script>
+      // Function to update user profile details
+      function updateProfile() {
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let address = document.getElementById("address").value;
+
+        // Validation: Ensure all fields are filled before updating
+        if (!firstName || !lastName || !email || !phone || !address) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        alert("Profile updated successfully!");
+        // In a real-world scenario, this data can be stored in a database or localStorage
+      }
+
+      // Function to preview profile image before upload
+      document
+        .getElementById("profileImage")
+        .addEventListener("change", function (event) {
+          let file = event.target.files[0]; // Get the selected file
+          if (file) {
+            let reader = new FileReader(); // Create FileReader object
+            reader.onload = function (e) {
+              document.getElementById("profilePic").src = e.target.result; // Update profile picture preview
+            };
+            reader.readAsDataURL(file); // Read the file as a Data URL
+          }
+        });
+    </script>
+  </body>
+</html>

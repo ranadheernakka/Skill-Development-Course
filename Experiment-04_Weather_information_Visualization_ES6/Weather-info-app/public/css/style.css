@@ -1,0 +1,57 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(84, 157, 216);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#grad {
+    background-image: linear-gradient(to right, rgb(0, 255, 42) , rgb(0, 174, 255));
+  }
+.heading {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    font-family: 'Domine', serif;
+}
+
+.container {
+    margin: 10px auto;
+    width: 50%;
+}
+
+.container1 input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.footer {
+    margin-top: 100px;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    font-family: 'Domine', serif;
+}
+
+.logo {
+    
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    
+}

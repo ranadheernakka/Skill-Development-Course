@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Shopping Cart</title>
+    <style>
+        /* Basic styling for better layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .empty {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order History</h1>
+
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <a href="cart2.html">Shopping Cart</a> |
+            <a href="INDEX2.html">Home</a> |
+            <a href="userprofile1.html">Profile</a>
+        </div>
+
+        <!-- Order History Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Items</th>
+                    <th>Total Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="orderHistory">
+             <!-- Orders will be loaded here dynamically -->
+            </tbody>
+        </table>
+
+        <p id="emptyMsg" class="empty">No orders found.</p>
+    </div>
+
+    <script>
+        // Function to load order history from localStorage
+        function loadOrderHistory() {
+            let orders = JSON.parse(localStorage.getItem("orderHistory")) || []; // Get stored orders or empty array
+
+            let orderTable = document.getElementById("orderHistory");
+            let emptyMessage = document.getElementById("emptyMsg");
+
+            if (orders.length === 0) {
+                // Show "No orders found" message if there are no orders
+                emptyMessage.style.display = "block";
+            } else {
+                emptyMessage.style.display = "none"; // Hide empty message
+                orders.forEach(order => {
+                    let row = `<tr>
+                        <td>${order.id}</td>
+                        <td>${order.items}</td>
+                        <td>Rs. ${order.total}</td>
+                        <td>${order.date}</td>
+                    </tr>`;
+                    orderTable.innerHTML += row;
+                });
+            }
+        }
+
+        // Load order history when the page loads
+        window.onload = loadOrderHistory;
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Shopping Cart</title>
+    <style>
+        /* Basic styling for better layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .empty {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order History</h1>
+
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <a href="cart2.html">Shopping Cart</a> |
+            <a href="INDEX2.html">Home</a> |
+            <a href="userprofile1.html">Profile</a>
+        </div>
+
+        <!-- Order History Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Items</th>
+                    <th>Total Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="orderHistory">
+             <!-- Orders will be loaded here dynamically -->
+            </tbody>
+        </table>
+
+        <p id="emptyMsg" class="empty">No orders found.</p>
+    </div>
+
+    <script>
+        // Function to load order history from localStorage
+        function loadOrderHistory() {
+            let orders = JSON.parse(localStorage.getItem("orderHistory")) || []; // Get stored orders or empty array
+
+            let orderTable = document.getElementById("orderHistory");
+            let emptyMessage = document.getElementById("emptyMsg");
+
+            if (orders.length === 0) {
+                // Show "No orders found" message if there are no orders
+                emptyMessage.style.display = "block";
+            } else {
+                emptyMessage.style.display = "none"; // Hide empty message
+                orders.forEach(order => {
+                    let row = `<tr>
+                        <td>${order.id}</td>
+                        <td>${order.items}</td>
+                        <td>Rs. ${order.total}</td>
+                        <td>${order.date}</td>
+                    </tr>`;
+                    orderTable.innerHTML += row;
+                });
+            }
+        }
+
+        // Load order history when the page loads
+        window.onload = loadOrderHistory;
+    </script>
+</body>
+
+</html>

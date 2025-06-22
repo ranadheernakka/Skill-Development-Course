@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registeration Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #6c63ff;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #574fd1;
+    }
+  </style>
+</head>
+<body>
+
+<form id="registrationForm">
+  <h2>Register</h2>
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="text" id="phno" placeholder="Phone Number" required>
+  <input type="text" id="address" placeholder="Address" required>
+
+  <div>
+    Gender:<br>
+    <label><input type="radio" name="gender" value="Male"> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+  </div>
+
+  <div>
+    Languages:<br>
+    <label><input type="checkbox" name="language" value="English"> English</label>
+    <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
+    <label><input type="checkbox" name="language" value="Other"> Other</label>
+  </div>
+
+  <button type="submit">Register</button>
+</form>
+
+<script src="script.js"></script> <!-- include your JavaScript here -->
+</body>
+</html>

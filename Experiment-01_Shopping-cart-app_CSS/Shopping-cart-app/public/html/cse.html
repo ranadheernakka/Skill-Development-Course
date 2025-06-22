@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>Welcome to ACE e-Book's website</title>
+    <!-- The <title> tag sets the title of the webpage, which appears on the browser tab -->
+  </head>
+  <body>
+    <center>
+      <br />
+      <h2>Computer Science & Engineering Catalogue</h2>
+      <!-- The <h2> tag defines a heading for the page, indicating the catalog section -->
+
+      <table width="90%" align="center" bgcolor="#ffe1bf">
+        <!-- The <table> tag is used to create a table.
+                 - width="90%" makes the table take 90% of the page width.
+                 - align="center" centers the table on the page.
+                 - bgcolor="#ffe1bf" sets the background color of the table to a light orange. -->
+
+        <tbody bgcolor="#ff6600">
+          <!-- The <tbody> tag groups table rows.
+                     - bgcolor="#ff6600" sets the background color of this section (header) to orange. -->
+          <th width="25%">
+            <hr />
+            BOOK
+            <hr />
+          </th>
+          <th width="35%">
+            <hr />
+            DETAILS
+            <hr />
+          </th>
+          <th width="20%">
+            <hr />
+            PRICE
+            <hr />
+          </th>
+          <th width="20%">
+            <hr />
+            OPTION
+            <hr />
+          </th>
+          <!-- These <th> (table headers) define the column names: BOOK, DETAILS, PRICE, OPTION. -->
+        </tbody>
+
+        <tbody align="center">
+          <!-- This <tbody> tag groups book entries and aligns their content to the center. -->
+
+          <!-- First Book Entry: C - Programming -->
+          <tr>
+            <td align="center">
+              <img
+                src="books/Title_C_Programming.jpeg"
+                width="90"
+                height="120"
+              />
+              <!-- The <img> tag displays an image of the book cover. -->
+            </td>
+            <td align="center">
+              Title: C - Programming<br />
+              Author: E. Balaguru Swamy<br />
+              Publisher: Tata McGraw-Hill
+              <!-- Displays book details with line breaks <br> for better formatting. -->
+            </td>
+            <td align="center">Rs. 1200/-</td>
+            <td align="center">
+              <input type="button" value="Add to cart" />
+              <!-- A button allowing users to add the book to their cart. -->
+            </td>
+          </tr>
+
+          <!-- Second Book Entry: Computer Networks -->
+          <tr>
+            <td align="center">
+              <img
+                src="books/COMPUTER_NETWORKS_B.jpg"
+                width="90"
+                height="120"
+              />
+            </td>
+            <td align="center">
+              Title: Computer Networks<br />
+              Author: M. Ananda Rao<br />
+              Publisher: ARS Publications
+            </td>
+            <td align="center">Rs. 1000/-</td>
+            <td align="center">
+              <input type="button" value="Add to cart" />
+            </td>
+          </tr>
+
+          <!-- Third Book Entry: Java Programming -->
+          <tr>
+            <td align="center">
+              <img src="books/Java_SJS_23_24.jpeg" width="90" height="120" />
+            </td>
+            <td align="center">
+              Title: Java Programming<br />
+              Author: Jhanaki Ramaya<br />
+              Publisher: Matches Publications
+            </td>
+            <td align="center">Rs. 2300/-</td>
+            <td align="center">
+              <input type="button" value="Add to cart" />
+            </td>
+          </tr>
+
+          <!-- Fourth Book Entry: Web Technologies -->
+          <tr>
+            <td align="center">
+              <img src="books/web_technologies.jpg" width="90" height="120" />
+            </td>
+            <td align="center">
+              Title: Web Technologies<br />
+              Author: Uttam K. Roy<br />
+              Publisher: Oxford Publications
+            </td>
+            <td align="center">Rs. 3000/-</td>
+            <td align="center">
+              <input type="button" value="Add to cart" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
