@@ -1,53 +1,137 @@
-Program 15 - Django Weather App
+![image](https://github.com/user-attachments/assets/92b5c2df-1a85-4f5c-9de7-e57999789483)---
 
-AIM
-To develop a weather application frontend using Django templating that displays current weather information along with a line chart showing past 5 days' temperature trends using Chart.js.
+## **PROGRAM 15 – Django Weather App**
 
-DESCRIPTION
-This experiment demonstrates how to build a weather app using Django templates and Chart.js for visualization. The app fetches weather data, including current temperature, description, and icon, and renders it dynamically on a webpage. It also displays historical temperature data for the past 5 days as a line chart. This project is ideal for beginners to learn Django templating, integration of JavaScript libraries like Chart.js, and dynamic data visualization on the frontend.
+---
 
-PROJECT STRUCTURE
+### **AIM**
+
+To develop a **weather application frontend** using Django templating that displays **current weather information** and a **line chart** showing temperature trends over the past 5 days using **Chart.js**.
+
+---
+
+### **DESCRIPTION**
+
+This experiment demonstrates how to create a Django-based weather application with dynamic weather data rendering and visualizations. Key features include:
+
+* Fetching **real-time weather** data (temperature, description, icon)
+* Rendering data using **Django templates**
+* Displaying **historical temperature data** in a **line chart** using Chart.js
+* Introducing integration between backend-rendered HTML and frontend JavaScript
+
+This project helps beginners understand:
+
+* **Django views and templates**
+* **Dynamic context rendering**
+* **JavaScript integration (Chart.js)** in Django apps
+
+---
+
+### **PROJECT STRUCTURE**
+
+```
 weather-app/
 │
-├── templates/
-│   └── index.html          # Main HTML template with Django template tags and Chart.js integration
+├── weather_app/                # Django app
+│   ├── views.py                # Logic for fetching weather data
+│   ├── urls.py                 # App-level routing
+│   └── templates/
+│       └── index.html          # Template with Chart.js and weather info
 │
-├── static/
-│   └── (optional static files like CSS or JS if any)
+├── weather_project/            # Project configuration
+│   ├── settings.py             # Project-wide settings
+│   └── urls.py                 # Project-wide URL routing
 │
-├── views.py               # Django view to pass weather data to template
-├── urls.py                # URL configuration for the app
-├── settings.py            # Django project settings
+├── static/                     # (Optional) CSS or JS files
 │
-└── README.md              # Project documentation
+├── db.sqlite3                  # Database (auto-generated)
+├── manage.py                   # Django management utility
+└── README.md                   # Documentation
+```
 
+---
 
- 
-INSTALLATION & SETUP
-PREREQUISITES
-•	Python 3.x
-•	Django installed (pip install django)
-•	Basic knowledge of Django templating and Python
-•	Chart.js included via CDN (no extra installation needed)
+### **INSTALLATION & SETUP**
 
-STEPS TO RUN THE PROJECT
-1.Create Django Project & App
+#### **PREREQUISITES**
+
+* Python 3.x
+* Django (`pip install django`)
+* Chart.js (included via CDN)
+* Basic knowledge of Django and HTML templating
+
+---
+
+### **STEPS TO RUN THE PROJECT**
+
+1. **Create Django Project and App**
+
+```bash
 django-admin startproject weather_project
 cd weather_project
 python manage.py startapp weather_app
+```
 
-2.Setup URL and Views
-Add URL route to render the weather template.
-Create view function to fetch and pass weather data (current + historical) as context.
-3.Create Template
-Place index.html inside templates/ folder.
-Use Django templating tags to insert weather data into the HTML and JavaScript.
-4.Run the Server
+2. **Configure URLs**
+
+* In `weather_project/urls.py`, include the app’s routes:
+
+```python
+from django.urls import path, include
+urlpatterns = [
+    path('', include('weather_app.urls')),
+]
+```
+
+3. **Set Up View**
+
+* In `weather_app/views.py`, define a function to:
+
+  * Fetch current weather via API
+  * Prepare a 5-day temperature list
+  * Pass the data to `index.html` via context
+
+4. **Create Template**
+
+* Place `index.html` in `weather_app/templates/`
+* Use Django template tags (`{{ variable }}`) to render dynamic content
+* Embed Chart.js via CDN in `<script>` tag for chart rendering
+
+5. **Run the Server**
+
+```bash
 python manage.py runserver
+```
 
-5.Visit in Browser
-Open your browser and go to:
+6. **Access the Application**
+
+* Open your browser and navigate to:
+
+```
 http://127.0.0.1:8000/
+```
 
-LICENSE
-This project is licensed under the MIT License.
+---
+
+### **FEATURES**
+
+* **Real-time** weather data
+* **Django templating** for dynamic UI
+* **Line chart** using Chart.js
+* Clean and interactive **web interface**
+
+---
+
+### **LICENSE**
+
+This project is **open-source** and free to use.
+
+---
+
+### **Author**
+
+**N Ranadheer**
+
+GitHub: [https://github.com/ranadheernakka](https://github.com/ranadheernakka)
+
+---
