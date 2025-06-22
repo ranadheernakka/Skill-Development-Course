@@ -107,9 +107,8 @@ This project is **open‑source** and free to use.
 
 ### **Author**
 
-• **M. Swayam Prakash**
+• **N Ranadheer**
 
-• GitHub: [https://github.com/swayamprakashm](https://github.com/swayamprakashm)
+• GitHub: [https://github.com/ranadheernakka](https://github.com/ranadheernakka)
 
 ---
-![image](https://github.com/user-attachments/assets/2162ab9e-11b1-49b1-ae71-d2920e95507a)
