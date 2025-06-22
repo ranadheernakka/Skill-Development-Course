@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/92b5c2df-1a85-4f5c-9de7-e57999789483)---
+---
 
 ## **PROGRAM 15 – Django Weather App**
 
