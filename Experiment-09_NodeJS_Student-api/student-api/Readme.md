@@ -98,8 +98,8 @@ http://localhost:3000/api/students
 
 ```json
 {
-  "name": "Swayam",
-  "age": 21,
+  "name": "ranadheer",
+  "age": 19,
   "course": "Mathematics"
 }
 ```
@@ -112,8 +112,8 @@ http://localhost:3000/api/students
 [
   {
     "id": 1,
-    "name": "Swayam",
-    "age": 21,
+    "name": "ranadheer",
+    "age": 19,
     "course": "Mathematics"
   }
 ]
