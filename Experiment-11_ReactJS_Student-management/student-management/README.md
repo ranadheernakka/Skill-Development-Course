@@ -1,12 +1,29 @@
-PROGRAM 11 – Student Management System with React.
+---
 
-AIM
-To develop a student management system frontend using React, implementing navigation through registration, login, contact, and about pages using React Router.
+## **PROGRAM 11 – Student Management System with React**
 
-DESCRIPTION
-This experiment demonstrates how to build a single-page application (SPA) using React.js. The application simulates a student management system with basic navigation between multiple pages. It leverages React Router for client-side routing and component-based architecture for modular design. This project is ideal for beginners to understand the fundamentals of React, routing, JSX, component communication, and styling with CSS.
+---
 
-PROJECT STRUCTURE
+### **AIM**
+
+To develop a **student‑management system front end** using **React**, implementing navigation for **Registration**, **Login**, **Contact**, and **About** pages with **React Router**.
+
+---
+
+### **DESCRIPTION**
+
+This experiment demonstrates how to build a **single‑page application (SPA)** with **React.js**. The app simulates a student‑management system and provides basic navigation among multiple pages. It leverages:
+
+* **React Router** for client‑side routing
+* **Component‑based architecture** for modular design
+
+The project is ideal for beginners to learn the fundamentals of React, routing, JSX, component communication, and CSS styling.
+
+---
+
+### **PROJECT STRUCTURE**
+
+```
 student-management-react/
 │
 ├── public/
@@ -19,46 +36,80 @@ student-management-react/
 │   │   ├── Login.js         # Login page component
 │   │   └── Registration.js  # Registration page component
 │   ├── App.js               # Main app with routing
-│   ├── App.css              # Styling for the app
-│   ├── index.js             # Entry point of the React app
+│   ├── App.css              # App‑level styles
+│   ├── index.js             # React entry point
 │   └── index.css            # Global styles
 │
 ├── package.json             # Project metadata and dependencies
 └── README.md                # Project documentation
+```
 
+---
 
- 
+### **INSTALLATION & SETUP**
 
-INSTALLATION & SETUP
-PREREQUISITES
-•	Node.js & npm
-•	VS Code or any code editor
-•	Basic knowledge of React
+#### **PREREQUISITES**
 
-STEPS TO RUN THE PROJECT
-1.Create Project using Create React App
-npx create-react-app student-management-react
-cd student-management-react
+• Node.js & npm
 
-2.Install React Router DOM
-npm install react-router-dom
+• VS Code (or any code editor)
 
-3.Create Component Files
-Inside src/components/, create:
-•	About.js
-•	Contact.js
-•	Login.js
-•	Registration.js
-Each should return basic JSX content.
+• Basic knowledge of React
 
-4.Update App.js to Implement Routing
-Use BrowserRouter, Routes, and Route from react-router-dom to route pages.
+---
 
-5.Run the Project
-npm start
+#### **STEPS TO RUN THE PROJECT**
 
-6.Visit in Browser
-http://localhost:3000
+1. **Create the project with Create React App**
 
-LICENSE
-This project is licensed under the MIT License.
+   ```bash
+   npx create-react-app student-management-react
+   cd student-management-react
+   ```
+
+2. **Install React Router DOM**
+
+   ```bash
+   npm install react-router-dom
+   ```
+
+3. **Create component files**
+   Inside `src/components/`, add:
+
+   * `About.js`
+   * `Contact.js`
+   * `Login.js`
+   * `Registration.js`
+     Each should return basic JSX markup.
+
+4. **Update `App.js` to implement routing**
+   Use `BrowserRouter`, `Routes`, and `Route` from **react-router-dom** to map pages.
+
+5. **Run the project**
+
+   ```bash
+   npm start
+   ```
+
+6. **Visit in browser**
+
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+### **LICENSE**
+
+This project is **open‑source** and free to use.
+
+---
+
+### **Author**
+
+• **M. Swayam Prakash**
+
+• GitHub: [https://github.com/swayamprakashm](https://github.com/swayamprakashm)
+
+---
+![image](https://github.com/user-attachments/assets/2162ab9e-11b1-49b1-ae71-d2920e95507a)
