@@ -1,65 +1,136 @@
-Program 14 - Django Student Management
+---
 
-AIM  
-To develop a student management system backend using Django, allowing users to register, login, and access information through a clean and basic Canvas-style UI.
+## **PROGRAM 14 – Django Student Management**
 
-DESCRIPTION  
-This experiment demonstrates how to build a basic web application using Django. The project implements user authentication (register and login), and basic navigation through pages like Home, About, and Contact. It showcases Django concepts like URL routing, views, templates, and static file management. This project is ideal for beginners to learn the fundamentals of Django web development including template rendering, view functions, and project structure.
+---
 
-PROJECT STRUCTURE  
+### **AIM**
+
+To develop a **student management system backend** using Django, enabling users to **register**, **log in**, and access basic student information through a clean, **Canvas-style UI**.
+
+---
+
+### **DESCRIPTION**
+
+This experiment demonstrates how to build a basic Django web application with user authentication and navigation between pages like **Home**, **About**, and **Contact**. It introduces key Django concepts such as:
+
+* **URL routing**
+* **Views and templates**
+* **Static file management**
+* **Form handling and authentication**
+
+The project is ideal for beginners exploring Django's **MVT (Model-View-Template)** architecture.
+
+---
+
+### **PROJECT STRUCTURE**
+
+```
 student_mgmt/
-├── core/
-│ ├── views.py # Contains views for all pages
-│ ├── urls.py # App URL routing
-├── templates/
-│ ├── base.html # Base template with common UI elements
-│ ├── home.html # Home page template
-│ ├── about.html # About page template
-│ ├── contact.html # Contact page template
-│ ├── login.html # Login page template
-│ └── register.html # Registration page template
-├── student_mgmt/
-│ ├── settings.py # Project settings including installed apps and templates
-│ ├── urls.py # Project-level URL routing
-├── db.sqlite3 # SQLite database file
-├── manage.py # Django project management script
-└── README.md # Project documentation
+├── core/                    # Application logic
+│   ├── views.py            # View functions for all routes
+│   └── urls.py             # URL patterns specific to the app
+│
+├── templates/              # HTML templates for rendering UI
+│   ├── base.html           # Common layout (header/footer)
+│   ├── home.html           # Home page
+│   ├── about.html          # About page
+│   ├── contact.html        # Contact page
+│   ├── login.html          # User login
+│   └── register.html       # User registration
+│
+├── student_mgmt/           # Main project settings
+│   ├── settings.py         # Project configuration
+│   └── urls.py             # Project-level URL routing
+│
+├── db.sqlite3              # SQLite database
+├── manage.py               # Django CLI utility
+└── README.md               # Documentation
+```
 
+---
 
-     
-INSTALLATION & SETUP 
-PREREQUISITES  
-•	Python 3.x  
-•	Django 5.2  
-•	VS Code or any preferred code editor  
-•	Basic knowledge of Python and Django framework  
+### **INSTALLATION & SETUP**
 
-STEPS TO RUN THE PROJECT  
-1.Clone the repository (or create the project and app as per instructions)  
+#### **PREREQUISITES**
+
+* Python 3.x
+* Django 5.2
+* VS Code or any preferred editor
+* Basic knowledge of Django
+
+---
+
+#### **STEPS TO RUN THE PROJECT**
+
+1. **Clone the Repository or Create Project**
+
+```bash
 git clone <repository-url>
 cd student_mgmt
+```
 
-2.Create a virtual environment and activate it (optional but recommended)
+2. **(Optional) Create and Activate Virtual Environment**
+
+```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+# Activate environment:
+source venv/bin/activate   # For macOS/Linux
+venv\Scripts\activate      # For Windows
+```
 
-3.Install Django
+3. **Install Django**
+
+```bash
 pip install django==5.2
+```
 
-4.Run migrations
+4. **Apply Migrations**
+
+```bash
 python manage.py migrate
+```
 
-5.Create a superuser (optional, for admin access)
+5. **Create Superuser (Optional - for Admin Panel)**
+
+```bash
 python manage.py createsuperuser
+```
 
-6.Run the development server
+6. **Run the Development Server**
+
+```bash
 python manage.py runserver
+```
 
-7.Open the app in your browser
-Visit:
+7. **Access the App in Browser**
+   Visit:
+
+```
 http://127.0.0.1:8000/
+```
 
- 
-LICENSE
-This project is licensed under the MIT License.
+---
+
+### **FEATURES**
+
+* User registration and login
+* Navigation between static pages
+* Canvas-style UI with shared layout
+* Easy-to-understand Django architecture
+
+---
+
+### **LICENSE**
+
+This project is **open-source** and free to use.
+
+---
+
+### **Author**
+
+**N Ranadheer**
+
+GitHub: [https://github.com/ranadheernakka](https://github.com/ranadheernakka)
+
+---
